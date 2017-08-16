@@ -22,6 +22,6 @@ fact 0 = 1
 fact x = x * (fact(x-1))
 
 --7) Obtener los 'n' últimos elementos de una lista 
-lastt [] = error "e"
-lastt n x 0 = x   
-lastt n x c= x !!length[x] ++ (lastt length[x]-1 x c++)
+lastt a [] c = error "e"
+lastt a b 0 = 0   
+lastt a b c = [last[b]] ++ [lastt(a, init[b], c-1)]

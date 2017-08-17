@@ -1,3 +1,4 @@
+--Class 16/08/2017
 import Data.Char
 
 -- 1) Obtener todas las posibles soluciones de x ,y, z del 1 al 100
@@ -22,6 +23,6 @@ fact 0 = 1
 fact x = x * (fact(x-1))
 
 --7) Obtener los 'n' últimos elementos de una lista 
-lastt a [] c = error "e"
-lastt a b 0 = 0   
-lastt a b c = [last[b]] ++ [lastt(a, init[b], c-1)]
+lastt 0 b = []
+lastt a [] = error "e"
+lastt a b  =  lastt(a-1 (init b) ++ last b) 
